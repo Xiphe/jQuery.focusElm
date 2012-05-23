@@ -25,5 +25,5 @@ Enables focus/blur callbacks for every dom element.
 Usage
 -----
 
-Just call $(element).focusElm( focusCallback(), blurCallback() );
+Just call $(element).focusElm( focusCallback(), blurCallback() );  
 See demo.html or http://jsfiddle.net/f2pDE/18/
