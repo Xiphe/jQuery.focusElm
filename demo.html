@@ -1,7 +1,8 @@
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="res/bootstrap.min.css" />
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script type="text/javascript" src="jquery.focuselm.min.js"></script>
+		<script type="text/javascript" src="jquery.focuselm.js"></script>
 		<script type="text/javascript">
 			jQuery(document).ready(function($) {
 				$('.foo').focusElm(
@@ -12,11 +13,26 @@
 						$(this).text('Click here to focus this element');
 					}
 				);
+
+				$('.bar').focusElm(
+					null,
+					function() {
+						alert( 'Blured ' + $(this).text() + '!');
+					}
+				);
 			});
 		</script>
 	</head>
 	<body>
-		<div class="foo">Click here to focus this element</div>
-		<div class="foo">Click here to focus this element</div>
+		<div class="container">
+			<h1 style="margin: 30px auto;">jQuery - Focus Element Plugin</h1>
+			<div class="btn foo">Click here to focus this element</div><br />
+			<div class="btn foo">Click here to focus this element</div><br />
+
+			<div class="btn bar">A</div><br />
+			<div class="btn bar">B</div><br />
+			<div class="btn bar">C</div><br />
+			<div class="btn bar">D</div>
+		</div>
 	</body>
 </html>
